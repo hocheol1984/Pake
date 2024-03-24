@@ -131,10 +131,10 @@ jobs:
           TARGETS: ${{ inputs.targets }}
 
       - name: Upload archive
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: output-${{ inputs.platform }}.zip
-          path: node_modules/pake-cli/output/*
+          path: node_modules/pake-cli/src-tauri/*
           retention-days: 3
 
       - name: Rust cache store
