@@ -138,7 +138,7 @@ jobs:
           retention-days: 3
 
       - name: Rust cache store
-        uses: actions/cache/save@v3
+        uses: actions/cache/save@v4
         if: steps.cache_store.outputs.cache-hit != 'true'
         with:
           path: |
